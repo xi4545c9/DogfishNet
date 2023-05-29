@@ -1,6 +1,20 @@
-﻿@page "/"
+﻿@* @inject NavigationManager NavigationManager *@
+@inject IJSRuntime Js
+@page "/"
 
 <PageTitle>Index</PageTitle>
 
 主页 <br>
-这是一个主页
+这是一个主页<br>
+<a href="https://github.com/xi4545c9/DogfishNet" target="_blank">github 页面(link)</a>
+<Button Type="@ButtonType.Dashed" OnClick="OnGithubPageButtonClick">github页面(button)</Button>
+
+@code
+{
+    private void OnGithubPageButtonClick()
+    {
+        string url = "https://github.com/xi4545c9/DogfishNet";
+        // NavigationManager.NavigateTo(url);
+        Js.InvokeVoidAsync("window.open", url, "_blank");
+    }
+}

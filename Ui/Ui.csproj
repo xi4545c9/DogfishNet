@@ -12,18 +12,14 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="AntDesign" Version="0.15.0" />
         <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.5" />
     </ItemGroup>
 
     <ItemGroup>
-      <AdditionalFiles Include="Pages\Counter.razor" />
-      <AdditionalFiles Include="Pages\Error.cshtml" />
-      <AdditionalFiles Include="Pages\FetchData.razor" />
       <AdditionalFiles Include="Pages\Index.razor" />
-      <AdditionalFiles Include="Pages\_Host.cshtml" />
       <AdditionalFiles Include="Shared\MainLayout.razor" />
       <AdditionalFiles Include="Shared\NavMenu.razor" />
-      <AdditionalFiles Include="Shared\SurveyPrompt.razor" />
     </ItemGroup>
 
     <ItemGroup>
