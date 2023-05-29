@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using AntDesign.ProLayout;
 using Microsoft.Extensions.DependencyInjection;
 
 
@@ -16,6 +17,15 @@ namespace Desktop
             var serviceCollection = new ServiceCollection();
             serviceCollection.AddWpfBlazorWebView();
             serviceCollection.AddAntDesign();
+            serviceCollection.Configure<ProSettings>(x =>
+            {
+                x.Title = "DogfishNet";
+                x.NavTheme = "light";
+                x.Layout = "mix";
+                x.PrimaryColor = "daybreak";
+                x.ContentWidth = "Fluid";
+                x.HeaderHeight = 64;
+            });
             Resources.Add("services",serviceCollection.BuildServiceProvider());
         }
     }

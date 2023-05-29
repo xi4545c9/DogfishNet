@@ -1,9 +1,19 @@
+using AntDesign.ProLayout;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-
+builder.Services.Configure<ProSettings>(x =>
+{
+    x.Title = "DogfishNet";
+    x.NavTheme = "light";
+    x.Layout = "mix";
+    x.PrimaryColor = "daybreak";
+    x.ContentWidth = "Fluid";
+    x.HeaderHeight = 64;
+});
 builder.Services.AddAntDesign();
 
 var app = builder.Build();
